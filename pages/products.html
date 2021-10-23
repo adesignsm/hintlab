@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="theme-color" content="#ffffff">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#ffffff">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="HandheldFriendly" content="true" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@70.2,333;86.3,361&display=swap" rel="stylesheet">
+        
+        <link rel = "stylesheet" type = "text/css" href = "assets/products.css" />
+        <link rel = "stylesheet" type = "text/css" href = "../assets/menu.css" />
+
+        <script src = "http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+
+    <body>
+        <div id = "wrapper">
+            <div id = "opacity"></div>
+            <nav id = "nav-menu">
+                <h1> <a href = "../index.html"> HINTLAB </a></h1>
+                <ul id = "nav-list">
+                    <li><a href = ""> SHOP </a></li>
+                    <li><a href = ""> ABOUT </a></li>
+                    <li><a href = ""> FAQ </a></li>
+                    <li><a href = ""> PROJECTS </a></li>
+                    <li id = "alt_bag"><a href = ""> NEWSLETTER </a></li>
+                </ul>
+            </nav>
+
+            <div id = "secondary-nav-menu" class = "desktop">
+                <li><a href = ""> FAQ </a></li>
+                <li><a href = ""> PROJECTS </a></li>
+                <li><a href = ""> NEWSLETTER </a></li>
+
+                <div id = "product-connections-list" class = "desktop">
+                    <li> BOYS 2 MEN </li>
+                    <li> FALL 2021 </li>
+                </div>
+            </div>
+
+            <div class = "front-elem" id = "nav-bar">
+                <h1> <a href = "https://subtle-onion.cloudvent.net/"> HINTLAB </a> </h1>
+
+                <div id = "cart-container">
+                    <ul id = "cart-list"></ul>
+                    
+                    <!-- <button id = "continue-checkout-button"> Pick up where you left off </button> -->
+
+                    <div id = "cart-checkout-container">
+                        <div id = "notes-container">
+                            <h3> SPECIAL REQUEST / INFO</h3>
+                            <textarea cols = "40" rows = "5"></textarea>
+                        </div>
+                        <h4 id = "sub-total"> Nothing in bag </h4>
+                        <p> Shipping calculated at checkout </p>
+                        <button id = "checkout-button"> CONTINUE CHECKOUT </button>
+                    </div>
+                </div>
+
+                <div id = "menu-icon">
+                    <div class="hamburger" id="hamburger-2">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div id = "cart-icon"> 0.00 </div>
+            </div>
+
+            <div id = "products-container"></div>
+
+            <div id = "products-info-container">
+                <div id = "product-info-box">
+                    <h1 id = "product-name"> PRODUCT NAME </h1>
+                    <p id = "product-price"> </p>
+                    <p id = "product-description"> "lorem ipsum jamie likes drake hogu likes 5 hour energy shots, sheesh jheeze ah ah ah one plus one equals one" </p>
+
+                    <select id = "product-size-list" name = "product-size-list">
+                        <option value = "title-option"> SELECT A SIZE </option>
+                    </select>
+                </div>
+
+                <div id = "product-img-carousel"></div>
+
+                <div id = "periferals-box">
+                    <ul>
+                        <li> SIZE GUIDE + </li>
+                        <li> DETAILS + </li>
+                        <li> SHIPPING + </li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer  id = "footer">
+                <div id = "footer-text">
+                    <h2> <a href = "https://www.instagram.com/_hintlab"> @_HINTLAB </a> </h2>
+                    <h2> <a href = "mailto:info@hintlab.shop"> INFO@HINTLAB.SHOP </a></h2> 
+                    <h2> <a href = "https://www.instagram.com/hintarchive"> @HINTARCHIVE </a> </h2>
+                </div>
+            </footer>
+        </div>
+
+        <script type = "text/javascript" src = "../scripts/three.js"></script>
+        <script type = "text/javascript" src = "scripts/products.js"></script>
+    </body>
+</html>

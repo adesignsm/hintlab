@@ -1,0 +1,46 @@
+/*MOBILE*/
+@media only screen and (max-width: 600px) {
+
+    #menu-icon {
+        margin-top: -10.4%;
+        margin-left: 90%;
+    }
+
+    .hamburger .line{
+        width: 62%;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        margin-bottom: 3px;
+        border-radius: 10px;
+
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .hamburger:hover{
+        cursor: pointer;
+    }
+
+    #hamburger-2.is-active .line:nth-child(1){
+        opacity: 0;
+        -webkit-transform: translateY(8px);
+        -ms-transform: translateY(8px);
+        -o-transform: translateY(8px);
+        transform: translateY(6px);
+    }
+    
+    #hamburger-2.is-active .line:nth-child(3){
+        opacity: 0;
+        -webkit-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+        -o-transform: translateY(-8px);
+        transform: translateY(-6px);
+    }
+}
+
+/*DESKTOP*/
+@media (min-width:1025px) {
+
+}
