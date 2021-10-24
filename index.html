@@ -32,7 +32,7 @@
                     <li><a href = ""> ABOUT </a></li>
                     <li><a href = ""> FAQ </a></li>
                     <li><a href = ""> PROJECTS </a></li>
-                    <li><a href = ""> NEWSLETTER </a></li>
+                    <li id = "alt-bag"><a href = ""> NEWSLETTER </a></li>
                 </ul>
             </nav>
 
@@ -44,6 +44,22 @@
                 <div id = "product-connections-list" class = "desktop">
                     <li> BOYS 2 MEN </li>
                     <li> FALL 2021 </li>
+                </div>
+            </div>
+
+            <div id = "cart-container">
+                <ul id = "cart-list"></ul>
+                
+                <!-- <button id = "continue-checkout-button"> Pick up where you left off </button> -->
+
+                <div id = "cart-checkout-container">
+                    <div id = "notes-container">
+                        <h3> SPECIAL REQUEST / INFO</h3>
+                        <textarea cols = "40" rows = "5"></textarea>
+                    </div>
+                    <h4 id = "sub-total"> Nothing in bag </h4>
+                    <p> Shipping calculated at checkout </p>
+                    <button id = "checkout-button"> CONTINUE CHECKOUT </button>
                 </div>
             </div>
 
@@ -91,6 +107,7 @@
         <script type = "text/javascript" src = "scripts/inflate.min.js"></script>
         <script type = "text/javascript" src = "scripts/FBXLoader.js"></script>
         <script type = "text/javascript" src = "scripts/OrbitControls.js"></script>
+        <script type = "text/javascript" src = "pages/scripts/products.js"></script>
         <script type = "text/javascript" src = "scripts/main.js"></script>
     </body>
 </html>

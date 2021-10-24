@@ -180,7 +180,7 @@ a {
 }
 
 /*DESKTOP*/
-@media (min-width:1025px) {
+@media (min-width: 1500px) and (max-width: 2056px) {
 
     body, html {
         overflow-y: hidden;
@@ -193,8 +193,16 @@ a {
         z-index: -1;
     }
 
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        background-color: transparent;
+    }
+
     #nav-menu {
         width: 100%;
+        min-width: 100%;
     }
 
     #nav-menu h1 {
@@ -206,18 +214,26 @@ a {
     }
 
     #nav-list {
-        float: right;
         margin-top: 40px;
-        margin-right: 2%;
-        width: 1400px;
-        max-width: 1400px;
+        margin-right: 2vw;
+        margin-left: 25vw;
     }
 
     #nav-list li {
-        margin-left: 12%;
-        font-size: 205%;
+        cursor: pointer;
+        font-size: 2vw;
         font-weight: lighter;
         display: inline;
+    }
+
+    #nav-list li:nth-child(1), #nav-list li:nth-child(2), #nav-list li:nth-child(3) {
+        margin-left: 5vw;
+        float: left;
+    }
+
+    #nav-list li:last-child {
+        margin-right: 0vw;
+        float: right;
     }
 
     #nav-bar h1 {
@@ -240,6 +256,60 @@ a {
         margin-top: 25%;
     }
 
+    #cart-container {
+        position: fixed;
+        margin-top: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+        font-size: 80%;
+        z-index: 4;
+        font-family: 'Inconsolata', monospace;
+        border-top: 1px solid #000;
+      }
+
+    #cart-list li {
+        margin-left: -5%;
+        list-style-type: none;
+    }
+
+    #cart-list img {
+        margin-top: -3%;
+        float: left;
+        width: 40%;
+    }
+
+    #cart-list button {
+        border: none;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 3%;
+        padding-left: 3%;
+        color: #fff;
+        background-color: #000;
+        margin-top: 3%;
+        margin-right: 5%;
+        font-size: 75%;
+    }
+
+    #cart-checkout-container {
+        margin-top: 30%;
+        margin-left: 5%;
+    }
+
+    #checkout-button {
+        border: none;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 3%;
+        padding-left: 3%;
+        color: #fff;
+        background-color: #000;
+        margin-top: 3%;
+        font-size: 100%;
+    }
+
     #music-player {
         position: fixed;
         top: 500px;
@@ -247,9 +317,10 @@ a {
         margin-left: 41px;
         height: auto;
         width: 250px;
+        min-width: 250px;
         border: 1px solid #000;
         border-radius: 10px;
-        padding-right: 5%;
+        padding-right: 80px;
         padding-left: .5%;
         padding-top: .5%;
         padding-bottom: 5px;
@@ -259,8 +330,8 @@ a {
       #player-inner {
           display: inline-block;
           padding-bottom: 3%;
-          width: 135%;
-          min-width: 135%;
+          width: 320px;
+          min-width: 320px;
           border-bottom: 1px solid #000;
       }
   
@@ -313,46 +384,278 @@ a {
           margin-right: 10%;
       }
 
-    footer {
+      footer {
         position: fixed;
+        background-color: transparent;
         bottom: 0%;
-        left: 0;
         width: 100%;
         max-width: 100%;
         border-top: none;
         z-index: 7;
     }
 
-    #footer-text {
-        float: left;
-        width: 100%;
-        margin-left: -19%;
-    }
-
-    #footer-text h2:nth-child(3) {
-        position: fixed;
-        right: 1%;
-    }
-
-    #footer-text h2:nth-child(1) {
-        margin-right: 11%;
-    }
-
-    #footer-text h1:nth-child(3) {
-        position: fixed;
-        left: 5%;
-    }
-
     footer h2 {
-        float: left;
         display: inline;
         font-weight: lighter;
-        font-size: 205%;
-        margin-left: 20%;
+        margin-right: 10vw;
+        font-size: 2vw;
+    }
+
+    #footer-text {
+        width: 100%;
+    }
+
+    #footer-text h2:first-child, #footer-text h2:nth-child(2) {
+        float: left;
+        margin-left: 1.5vw;
+    }
+
+    #footer-text h2:nth-child(2) {
+        margin-left: 16vw;
+    }
+
+    #footer-text h2:last-child {
+        float: right;
+        margin-right: 2vw;
     }
 }
 
 /*TABLET*/
-@media (min-width: 768px) {
-    
+@media only screen and (min-width: 768px) and (max-width: 1450px) {
+
+    body, html {
+        overflow-y: hidden;
+    }
+
+    #hero-canvas-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        background-color: transparent;
+    }
+
+    #nav-menu {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    #nav-menu h1 {
+        position: fixed;
+        top: -1%;
+        left: 2%;
+        font-size: 300%;
+        font-weight: lighter;
+    }
+
+    #nav-list {
+        margin-top: 40px;
+        margin-right: 2vw;
+        margin-left: 25vw;
+    }
+
+    #nav-list li {
+        cursor: pointer;
+        font-size: 2vw;
+        font-weight: lighter;
+        display: inline;
+    }
+
+    #nav-list li:nth-child(1), #nav-list li:nth-child(2), #nav-list li:nth-child(3) {
+        margin-left: 5vw;
+        float: left;
+    }
+
+    #nav-list li:last-child {
+        margin-right: 0vw;
+        float: right;
+    }
+
+    #nav-bar h1 {
+        display: none;
+    }
+
+    #secondary-nav-menu li {
+        margin-top: 4%;
+    }
+
+    #secondary-nav-menu {
+        position: fixed;
+        margin-top: 190px;
+        margin-left: 2%;
+        list-style: none;
+        font-size: 205%;
+    }
+
+    #product-connections-list {
+        margin-top: 25%;
+    }
+
+    #cart-container {
+        position: fixed;
+        margin-top: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+        font-size: 80%;
+        z-index: 4;
+        font-family: 'Inconsolata', monospace;
+        border-top: 1px solid #000;
+      }
+
+    #cart-list li {
+        margin-left: -5%;
+        list-style-type: none;
+    }
+
+    #cart-list img {
+        margin-top: -3%;
+        float: left;
+        width: 40%;
+    }
+
+    #cart-list button {
+        border: none;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 3%;
+        padding-left: 3%;
+        color: #fff;
+        background-color: #000;
+        margin-top: 3%;
+        margin-right: 5%;
+        font-size: 75%;
+    }
+
+    #cart-checkout-container {
+        margin-top: 30%;
+        margin-left: 5%;
+    }
+
+    #checkout-button {
+        border: none;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 3%;
+        padding-left: 3%;
+        color: #fff;
+        background-color: #000;
+        margin-top: 3%;
+        font-size: 100%;
+    }
+
+    #music-player {
+        position: fixed;
+        top: 500px;
+        margin-top: 5px;
+        margin-left: 41px;
+        height: auto;
+        width: 250px;
+        min-width: 250px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding-right: 80px;
+        padding-left: .5%;
+        padding-top: .5%;
+        padding-bottom: 5px;
+        background-color: #fff;
+      }
+  
+      #player-inner {
+          display: inline-block;
+          padding-bottom: 3%;
+          width: 320px;
+          min-width: 320px;
+          border-bottom: 1px solid #000;
+      }
+  
+      #player-inner img {
+          border-radius: 5px;
+          float: left;
+          width: 85px;
+      }
+  
+      #player-labels {
+          width: 100%;
+          margin-top: 7%;
+          margin-left: 28%;
+      }
+  
+      #player-labels h4 {
+          margin-top: -.1%;
+          margin-bottom: -.1%;
+          line-height: .1%;
+          font-weight: lighter;
+          font-size: 110%;
+      }
+  
+      #player-labels p {
+          font-weight: lighter;
+          color: #9e9e9e;
+          font-size: 70%;
+      }
+
+      #player-labels p:nth-child(3) {
+          font-size: 73%;
+      }
+  
+  
+      #player-controls {
+          margin-top: -1%;
+          margin-right: -25%;
+          text-align: right;
+      }
+  
+      #player-controls p {
+          font-size: 75%;
+          display: inline-block;
+          padding-bottom: .3%;
+          border-bottom: 1px solid #000;
+          margin-right: 5%;
+      }
+
+      #player-controls p:nth-child(1) {
+          margin-right: 10%;
+      }
+      footer {
+        position: fixed;
+        background-color: transparent;
+        bottom: 0%;
+        width: 100%;
+        max-width: 100%;
+        border-top: none;
+        z-index: 7;
+    }
+
+    footer h2 {
+        display: inline;
+        font-weight: lighter;
+        margin-right: 10vw;
+        font-size: 2vw;
+    }
+
+    #footer-text {
+        width: 100%;
+    }
+
+    #footer-text h2:first-child, #footer-text h2:nth-child(2) {
+        float: left;
+        margin-left: 1.5vw;
+    }
+
+    #footer-text h2:nth-child(2) {
+        margin-left: 16vw;
+    }
+
+    #footer-text h2:last-child {
+        float: right;
+        margin-right: 2vw;
+    }
 }

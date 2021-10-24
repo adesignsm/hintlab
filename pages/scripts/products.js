@@ -1,6 +1,7 @@
 var viewport_mobile = window.matchMedia("(max-width: 600px)");
 var viewport_desktop = window.matchMedia("(min-width:1025px)");
 var resolution_trig; //1 = desktop || 0 = mobile
+var global_cart, global_products;
 
 window.onload = function() {
 
@@ -18,6 +19,28 @@ window.onload = function() {
       nav_list.children[1].remove();
 
       //add hintlab link title
+
+      resolution_trig = 1;
+  
+  } else if (viewport_mobile.matches) {
+
+    resolution_trig = 0;
+  }
+}
+
+function retrieve_cart() {
+  
+  window.onload = function() {
+
+    var ls_title = localStorage.getItem("line_title");
+    var ls_price = localStorage.getItem("line_dollar");
+    var ls_qty = localStorage.getItem("line_qty");
+    var ls_img = localStorage.getItem("line_img");
+    var ls_size = localStorage.getItem("line_size");
+  
+    console.log(ls_title, ls_price, ls_qty, ls_img, ls_size);
+  
+    document.getElementById("cart-list").append(ls_title, ls_price, ls_qty, ls_img, ls_size);
   }
 }
 
@@ -70,7 +93,7 @@ $(document).ready(function(){
       shopping_bag();
     });
 
-    $("#alt_bag").click(function() {
+    $("#alt-bag").click(function() {
 
       shopping_bag();
     });
@@ -142,7 +165,8 @@ var selected_size;
 //build product cards and product info 
 var buildprod_cards = (products) => {
 
-  console.log(products);
+  global_products = products;
+  console.log(global_products);
 
   //default product info
   products.forEach((products) => {
@@ -259,38 +283,11 @@ shop_client.createCart().then((cart) => {
   }
 
   shop_client.fetchAllProducts().then((products) => {
-    
-    window.onhashchange = function() {
-  
-      var line_item = document.createElement("li");
-      
-      var line_img = document.createElement("img");
-      line_img.src = localStorage.getItem("line_img");
-    
-      var line_title = document.createElement("h3");
-      line_title.innerHTML = localStorage.getItem("line_title");
-    
-      var line_size = document.createElement("p");
-      line_size.innerHTML = "SIZE: " + localStorage.getItem("line_size");
-    
-      var line_dollar = document.createElement("h3");
-      line_dollar.innerHTML = "$" + localStorage.getItem("line_dollar");
-    
-      var line_qty = document.createElement("h3");
-      line_qty.id = "line-quantity";
-      line_qty.innerHTML = "QUANTITY: " + localStorage.getItem("line_qty");
-      
-    
-      line_item.append(line_img, line_dollar, line_title, line_size, line_qty);
-      document.getElementById("cart-list").appendChild(line_item);
-    }
   
     buildprod_cards(products);
 
     //add to cart function 
     atc_button.onmousedown = function(e) {
-      
-      console.log(cart, prod_id);
 
       shop_client.fetchProduct(prod_id).then(function(products) {
 
@@ -298,7 +295,7 @@ shop_client.createCart().then((cart) => {
 
           var cart_toggle = 1;
         }
-
+        
         cart.createLineItemsFromVariants({
 
           variant: products.variants[selected_size],
@@ -315,11 +312,15 @@ shop_client.createCart().then((cart) => {
             dec_line_item.innerHTML = "-";
             
             document.getElementById("sub-total").innerHTML = "SUB TOTAL: " + cart.subtotal;
-            document.getElementById("cart-icon").innerHTML = cart.subtotal;
 
-          cart.lineItems.forEach(function(item) {
+            if (resolution_trig == 0) {
+              document.getElementById("cart-icon").innerHTML = cart.subtotal;
             
-            var cart_list = document.getElementById("cart-list");
+            } else if (resolution_trig == 1) {
+              document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+            }
+            
+          cart.lineItems.forEach(function(item) {
 
             console.log(item, item.product_id, cart.lineItems[0].product_id);
 
@@ -351,12 +352,6 @@ shop_client.createCart().then((cart) => {
               document.getElementById("line-quantity").innerHTML = "QUANTITY: " + cart.lineItems[0].quantity;
               console.log("false");
             }
-            
-            localStorage.setItem("line_img", cart.lineItems[0].image.src);
-            localStorage.setItem("line_title", cart.lineItems[0].title);
-            localStorage.setItem("line_size", cart.lineItems[0].variant_title);
-            localStorage.setItem("line_dollar", cart.lineItems[0].line_price);
-            localStorage.setItem("line_qty", cart.lineItems[0].quantity);
 
             //increase and decrease quantity
             inc_line_item.onmousedown = function(e) {
@@ -365,7 +360,12 @@ shop_client.createCart().then((cart) => {
               line_qty.innerHTML = "QUANTITY: " + item.quantity;
 
               document.getElementById("sub-total").innerHTML = "SUB TOTAL: " + cart.subtotal;
-              document.getElementById("cart-icon").innerHTML = cart.subtotal;
+              
+              if (resolution_trig == 0) {
+                document.getElementById("cart-icon").innerHTML = cart.subtotal;
+              } else if (resolution_trig == 1) {
+                document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+              }
             }
 
             dec_line_item.onmousedown = function(e) {
@@ -376,13 +376,24 @@ shop_client.createCart().then((cart) => {
               if (item.quantity <= 0) {
 
                 item.quantity = 0;
+                
                 document.getElementById("sub-total").innerHTML = "SUB TOTAL: " + cart.subtotal;
-                document.getElementById("cart-icon").innerHTML = cart.subtotal;
+              
+                if (resolution_trig == 0) {
+                  document.getElementById("cart-icon").innerHTML = cart.subtotal;
+                } else if (resolution_trig == 1) {
+                  document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+                }
               
               } else {
 
                 document.getElementById("sub-total").innerHTML = "SUB TOTAL: " + cart.subtotal;
-                document.getElementById("cart-icon").innerHTML = cart.subtotal;
+              
+                if (resolution_trig == 0) {
+                  document.getElementById("cart-icon").innerHTML = cart.subtotal;
+                } else if (resolution_trig == 1) {
+                  document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+                }
               }
             }
           });

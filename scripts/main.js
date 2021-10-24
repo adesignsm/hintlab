@@ -30,9 +30,9 @@ window.onload = function() {
 
         //move 3d model closer to camera
         console.log("desktop");
-        camera.position.x = 160;
+        camera.position.x = 45;
         camera.position.y = -30;
-        camera.position.z = 160;
+        camera.position.z = 80; //brings closer to camera
 
         controls.target = new THREE.Vector3(-10, -30, 0); //x y z
         controls.update();
@@ -47,7 +47,6 @@ window.onload = function() {
         nav_list.children[3].innerHTML = "SEARCHBAR";
         nav_list.children[4].innerHTML = "SHOPPING BAG(0)";
         nav_list.children[1].remove();
-        nav_list.children[5].remove();
 
         //add hintlab link title
     }
@@ -231,4 +230,9 @@ $("#menu-icon").on("click", function() {
         $("#opacity").fadeOut(450);
         menu_flag = 0;
     }
+});
+
+$("#alt-bag").on("click", function() {
+
+    shopping_bag();
 });
