@@ -36,7 +36,7 @@ button {
 
 
 /*DESKTOP*/
-@media (min-width: 1500px) and (max-width: 2056px) {
+@media (min-width: 1450px) and (max-width: 2056px) {
 
     html {
         overflow-y: hidden;
@@ -385,7 +385,7 @@ button {
 }
 
 /*TABLET*/
-@media only screen and (min-width: 768px) and (max-width: 1450px) {
+@media only screen and (min-width: 760px) and (max-width: 1450px) {
     html {
         overflow-y: hidden;
         padding: 0;
@@ -417,14 +417,14 @@ button {
 
     #nav-menu h1 {
         position: fixed;
-        top: -1%;
-        left: 2%;
+        top: -1.5vw;
+        left: 2vw;
         font-size: 3vw;
         font-weight: lighter;
     }
 
     #nav-list {
-        margin-top: 40px;
+        margin-top: 2vw;
         margin-right: 2vw;
         margin-left: 25vw;
     }
@@ -723,7 +723,7 @@ button {
 }
 
 /*MOBILE*/
-@media only screen and (min-width: 300px) and (max-width: 768px) {
+@media only screen and (min-width: 300px) and (max-width: 760px) {
 
     #nav-menu a {
         text-decoration: none;

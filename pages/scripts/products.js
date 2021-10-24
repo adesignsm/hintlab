@@ -317,7 +317,7 @@ shop_client.createCart().then((cart) => {
               document.getElementById("cart-icon").innerHTML = cart.subtotal;
             
             } else if (resolution_trig == 1) {
-              document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+              document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + item.quantity + ")";
             }
             
           cart.lineItems.forEach(function(item) {
@@ -364,7 +364,7 @@ shop_client.createCart().then((cart) => {
               if (resolution_trig == 0) {
                 document.getElementById("cart-icon").innerHTML = cart.subtotal;
               } else if (resolution_trig == 1) {
-                document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+                document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + item.quantity + ")";
               }
             }
 
@@ -382,7 +382,7 @@ shop_client.createCart().then((cart) => {
                 if (resolution_trig == 0) {
                   document.getElementById("cart-icon").innerHTML = cart.subtotal;
                 } else if (resolution_trig == 1) {
-                  document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+                  document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + item.quantity + ")";
                 }
               
               } else {
@@ -392,7 +392,7 @@ shop_client.createCart().then((cart) => {
                 if (resolution_trig == 0) {
                   document.getElementById("cart-icon").innerHTML = cart.subtotal;
                 } else if (resolution_trig == 1) {
-                  document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.subtotal + ")";
+                  document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + item.quantity + ")";
                 }
               }
             }
