@@ -279,7 +279,7 @@ button {
     #cart-container {
         position: fixed;
         margin-top: 0%;
-        height: 100%;
+        height: 80%;
         width: 100%;
         background-color: #fff;
         display: none;
@@ -290,23 +290,26 @@ button {
       }
 
     #cart-list {
-        margin-top: 5vw;
-        margin-left: 15vw;
-        float: left;
+        position: absolute;
+        height: 100%;
+        margin-top: 1vw;
+        overflow-y: scroll;
     }
 
-    #cart-list button {
-        float: right;
+    #cart-list::-webkit-scrollbar {
+        opacity: 0;
     }
 
     #cart-list li {
-        margin-left: -5%;
+        margin-left: 5vw;
+        margin-bottom: 1vw;
         list-style-type: none;
     }
 
     #cart-list img {
         margin-top: -3%;
-        width: 20vw;
+        float: left;
+        width: 30vw;
     }
 
     #cart-list button {
@@ -323,14 +326,27 @@ button {
     }
 
     #cart-checkout-container {
-        margin-top: 5vw;
-        margin-right: 10vw;
         float: right;
+        margin-top: 10vw;
+        margin-right: 10vw;
+    }
+
+    #checkout-button {
+        border: none;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-right: 3%;
+        padding-left: 3%;
+        color: #fff;
+        background-color: #000;
+        margin-top: 3%;
+        font-size: 100%;
     }
 
     #cart-icon {
         display: none;
     }
+
 
     #checkout-button {
         border: none;
@@ -627,7 +643,7 @@ button {
     #cart-container {
         position: fixed;
         margin-top: 0%;
-        height: 100%;
+        height: 80%;
         width: 100%;
         background-color: #fff;
         display: none;
@@ -637,15 +653,27 @@ button {
         border-top: 1px solid #000;
       }
 
+    #cart-list {
+        position: absolute;
+        height: 100%;
+        margin-top: 1vw;
+        overflow-y: scroll;
+    }
+
+    #cart-list::-webkit-scrollbar {
+        opacity: 0;
+    }
+
     #cart-list li {
-        margin-left: -5%;
+        margin-left: 5vw;
+        margin-bottom: 1vw;
         list-style-type: none;
     }
 
     #cart-list img {
         margin-top: -3%;
         float: left;
-        width: 40%;
+        width: 30vw;
     }
 
     #cart-list button {
@@ -662,8 +690,9 @@ button {
     }
 
     #cart-checkout-container {
-        margin-top: 30%;
-        margin-left: 5%;
+        float: right;
+        margin-top: 10vw;
+        margin-right: 10vw;
     }
 
     #checkout-button {
