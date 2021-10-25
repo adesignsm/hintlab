@@ -387,7 +387,7 @@ a {
       footer {
         position: fixed;
         background-color: transparent;
-        bottom: 0%;
+        bottom: 25px;
         width: 100%;
         max-width: 100%;
         border-top: none;
@@ -403,6 +403,31 @@ a {
 
     #footer-text {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    .footer-item-1 {
+        text-align: left;
+        float: left;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .footer-item-2 {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-item-3 {
+        float: left;
+        text-align: right;
+        width: 100%;
+        padding-right: 30px;
     }
 
     #footer-text h2:first-child, #footer-text h2:nth-child(2) {
@@ -624,10 +649,11 @@ a {
       #player-controls p:nth-child(1) {
           margin-right: 10%;
       }
+
       footer {
         position: fixed;
         background-color: transparent;
-        bottom: 0%;
+        bottom: 25px;
         width: 100%;
         max-width: 100%;
         border-top: none;
@@ -643,6 +669,31 @@ a {
 
     #footer-text {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    .footer-item-1 {
+        text-align: left;
+        float: left;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .footer-item-2 {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-item-3 {
+        float: left;
+        text-align: right;
+        width: 100%;
+        padding-right: 30px;
     }
 
     #footer-text h2:first-child, #footer-text h2:nth-child(2) {
