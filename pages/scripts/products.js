@@ -13,9 +13,10 @@ window.onload = function() {
 
       //change inner text
       //remove an li element
-      nav_list.children[2].innerHTML = "ABOUT";
-      nav_list.children[3].innerHTML = "SEARCHBAR";
-      nav_list.children[4].innerHTML = "SHOPPING BAG(0)";
+      nav_list.children[2].innerHTML = "SHOP";
+      nav_list.children[3].innerHTML = "ABOUT";
+      nav_list.children[4].innerHTML = "SEARCH";
+      nav_list.children[5].innerHTML = "SHOPPING BAG(0)";
       nav_list.children[1].remove();
 
       //add hintlab link title
@@ -30,18 +31,6 @@ window.onload = function() {
 
 function retrieve_cart() {
   
-  window.onload = function() {
-
-    var ls_title = localStorage.getItem("line_title");
-    var ls_price = localStorage.getItem("line_dollar");
-    var ls_qty = localStorage.getItem("line_qty");
-    var ls_img = localStorage.getItem("line_img");
-    var ls_size = localStorage.getItem("line_size");
-  
-    console.log(ls_title, ls_price, ls_qty, ls_img, ls_size);
-  
-    document.getElementById("cart-list").append(ls_title, ls_price, ls_qty, ls_img, ls_size);
-  }
 }
 
 var class_toggle = 0;
@@ -127,35 +116,35 @@ $("#menu-icon").on("click", function() {
     }
 });
 
-  $(document).ready(function($) {
+  // $(document).ready(function($) {
   
-    if (window.history && window.history.pushState) {
+  //   if (window.history && window.history.pushState) {
   
-      $(window).on('popstate', function(e) {
+  //     $(window).on('popstate', function(e) {
         
-        e.preventDefault();
+  //       e.preventDefault();
         
-        var hashLocation = location.hash;
-        var hashSplit = hashLocation.split("#!/");
-        var hashName = hashSplit[1];
+  //       var hashLocation = location.hash;
+  //       var hashSplit = hashLocation.split("#!/");
+  //       var hashName = hashSplit[1];
   
-        if (hashName !== '') {
+  //       if (hashName !== '') {
   
-          var hash = window.location.hash;
+  //         var hash = window.location.hash;
   
-          if (hash === '') {
+  //         if (hash === '') {
   
-            window.location = 'http://127.0.0.1:5500/hint_lab/pages/products.html';
+  //           window.location = 'http://127.0.0.1:5500/hint_lab/pages/products.html';
   
-            return false;
+  //           return false;
           
-          }
-        }
-      });
+  //         }
+  //       }
+  //     });
   
-      window.history.pushState('forward', null, './products.html');
-    }
-  });
+  //     window.history.pushState('forward', null, './products.html');
+  //   }
+  // });
 
 var atc_button;
 var prod_card, prod_id;

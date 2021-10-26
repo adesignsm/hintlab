@@ -12,6 +12,10 @@ body, html {
     touch-action: pan-y; /*prevent user scaling*/
 }
 
+body::-webkit-scrollbar {
+    opacity: 0;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -69,27 +73,31 @@ button {
 
     #nav-menu h1 {
         position: fixed;
-        top: -1vw;
-        left: 2vw;
-        font-size: 3vw;
+        top: -28px;
+        left: 26px;
+        font-size: 60px;
         font-weight: lighter;
     }
 
     #nav-list {
         margin-top: 40px;
         margin-right: 2vw;
-        margin-left: 25vw;
+        margin-left: 20vw;
     }
 
     #nav-list li {
         cursor: pointer;
-        font-size: 2vw;
+        font-size: 30px;
         font-weight: lighter;
         display: inline;
     }
 
+    #nav-list li:nth-child(2) {
+        margin-left: 15vw;
+    }
+
     #nav-list li:nth-child(1), #nav-list li:nth-child(2), #nav-list li:nth-child(3) {
-        margin-left: 5vw;
+        margin-right: 5vw;
         float: left;
     }
 
@@ -107,7 +115,7 @@ button {
         margin-top: 190px;
         margin-left: 2%;
         list-style: none;
-        font-size: 2vw;
+        font-size: 30px;
         display: block;
     }
     #secondary-nav-menu li {
@@ -131,8 +139,8 @@ button {
         height: 100%;
         width: 100vw;
         float: right;
-        margin-top: 10vw;
-        margin-right: -15vw;
+        margin-top: 120px;
+        margin-right: -18vw;
         margin-bottom: 70%;
         font-family: 'Inconsolata', monospace;
     }
@@ -167,7 +175,6 @@ button {
 
     .products-card p {
         display: inline;
-        font-size: 1vw;
         font-weight: bolder;
 
         -webkit-transform:scale(1.5, 1);
@@ -363,7 +370,7 @@ button {
     footer {
         position: fixed;
         background-color: transparent;
-        bottom: 0%;
+        bottom: 25px;
         width: 100%;
         max-width: 100%;
         border-top: none;
@@ -379,6 +386,31 @@ button {
 
     #footer-text {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    .footer-item-1 {
+        text-align: left;
+        float: left;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .footer-item-2 {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-item-3 {
+        float: left;
+        text-align: right;
+        width: 100%;
+        padding-right: 30px;
     }
 
     #footer-text h2:first-child, #footer-text h2:nth-child(2) {
@@ -393,10 +425,6 @@ button {
     #footer-text h2:last-child {
         float: right;
         margin-right: 2vw;
-    }
-
-    body {
-        background-color: #fff;
     }
 }
 
@@ -433,32 +461,31 @@ button {
 
     #nav-menu h1 {
         position: fixed;
-        top: -1.5vw;
-        left: 2vw;
-        font-size: 3vw;
+        top: -2vw;
+        left: 26px;
+        font-size: 60px;
         font-weight: lighter;
     }
 
     #nav-list {
-        margin-top: 2vw;
-        margin-right: 2vw;
-        margin-left: 25vw;
+        margin-top: 40px;
+        margin-left: 30vw;
     }
 
     #nav-list li {
         cursor: pointer;
-        font-size: 2vw;
+        font-size: 30px;
         font-weight: lighter;
         display: inline;
     }
 
     #nav-list li:nth-child(1), #nav-list li:nth-child(2), #nav-list li:nth-child(3) {
-        margin-left: 5vw;
+        margin-right: 5vw;
         float: left;
     }
 
     #nav-list li:last-child {
-        margin-right: 0vw;
+        padding-right: 30px;
         float: right;
     }
 
@@ -469,11 +496,12 @@ button {
     #secondary-nav-menu {
         position: fixed;
         margin-top: 190px;
-        margin-left: 2%;
+        margin-left: 38px;
         list-style: none;
-        font-size: 2vw;
+        font-size: 30px;
         display: block;
     }
+
     #secondary-nav-menu li {
         list-style-type: none;
         margin-left: -5%;
@@ -503,7 +531,7 @@ button {
 
     .products-card {
         flex: 0 0 30%;
-        flex-basis: 30%;
+        flex-basis: 28vw;
         width: 50%;
         margin-right: 0;
         margin-left: 0;
@@ -531,7 +559,6 @@ button {
 
     .products-card p {
         display: inline;
-        font-size: 1vw;
         font-weight: bolder;
 
         -webkit-transform:scale(1.5, 1);
@@ -714,7 +741,7 @@ button {
     footer {
         position: fixed;
         background-color: transparent;
-        bottom: 0%;
+        bottom: 25px;
         width: 100%;
         max-width: 100%;
         border-top: none;
@@ -730,6 +757,31 @@ button {
 
     #footer-text {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        font-weight: lighter;
+    }
+
+    .footer-item-1 {
+        text-align: left;
+        float: left;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .footer-item-2 {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-item-3 {
+        float: left;
+        text-align: right;
+        width: 100%;
+        padding-right: 30px;
     }
 
     #footer-text h2:first-child, #footer-text h2:nth-child(2) {

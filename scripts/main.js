@@ -43,9 +43,10 @@ window.onload = function() {
 
         //change inner text
         //remove an li element
-        nav_list.children[2].innerHTML = "ABOUT";
-        nav_list.children[3].innerHTML = "SEARCHBAR";
-        nav_list.children[4].innerHTML = "SHOPPING BAG(0)";
+        nav_list.children[2].innerHTML = "SHOP";
+        nav_list.children[3].innerHTML = "ABOUT";
+        nav_list.children[4].innerHTML = "SEARCH";
+        nav_list.children[5].innerHTML = "SHOPPING BAG(0)";
         nav_list.children[1].remove();
 
         //add hintlab link title

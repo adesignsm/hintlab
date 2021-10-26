@@ -10,6 +10,10 @@ body, html {
     touch-action: pan-y; /*prevent user scaling*/
 }
 
+body::-webkit-scrollbar {
+    opacity: 0;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -180,7 +184,7 @@ a {
 }
 
 /*DESKTOP*/
-@media (min-width: 1500px) and (max-width: 2056px) {
+@media (min-width: 1450px) and (max-width: 2056px) {
 
     body, html {
         overflow-y: hidden;
@@ -207,27 +211,31 @@ a {
 
     #nav-menu h1 {
         position: fixed;
-        top: -1%;
-        left: 2%;
-        font-size: 300%;
+        top: -28px;
+        left: 26px;
+        font-size: 60px;
         font-weight: lighter;
     }
 
     #nav-list {
         margin-top: 40px;
         margin-right: 2vw;
-        margin-left: 25vw;
+        margin-left: 20vw;
     }
 
     #nav-list li {
         cursor: pointer;
-        font-size: 2vw;
+        font-size: 30px;
         font-weight: lighter;
         display: inline;
     }
 
+    #nav-list li:nth-child(2) {
+        margin-left: 15vw;
+    }
+
     #nav-list li:nth-child(1), #nav-list li:nth-child(2), #nav-list li:nth-child(3) {
-        margin-left: 5vw;
+        margin-right: 5vw;
         float: left;
     }
 
@@ -247,9 +255,9 @@ a {
     #secondary-nav-menu {
         position: fixed;
         margin-top: 190px;
-        margin-left: 2%;
+        margin-left: 28px;
         list-style: none;
-        font-size: 205%;
+        font-size: 30px;
     }
 
     #product-connections-list {
@@ -314,7 +322,7 @@ a {
         position: fixed;
         top: 500px;
         margin-top: 5px;
-        margin-left: 41px;
+        margin-left: 30px;
         height: auto;
         width: 250px;
         min-width: 250px;
@@ -473,32 +481,31 @@ a {
 
     #nav-menu h1 {
         position: fixed;
-        top: -1%;
-        left: 2%;
-        font-size: 300%;
+        top: -2vw;
+        left: 26px;
+        font-size: 60px;
         font-weight: lighter;
     }
 
     #nav-list {
         margin-top: 40px;
-        margin-right: 2vw;
-        margin-left: 25vw;
+        margin-left: 30vw;
     }
 
     #nav-list li {
         cursor: pointer;
-        font-size: 2vw;
+        font-size: 30px;
         font-weight: lighter;
         display: inline;
     }
 
     #nav-list li:nth-child(1), #nav-list li:nth-child(2), #nav-list li:nth-child(3) {
-        margin-left: 5vw;
+        margin-right: 5vw;
         float: left;
     }
 
     #nav-list li:last-child {
-        margin-right: 0vw;
+        padding-right: 30px;
         float: right;
     }
 
@@ -513,7 +520,7 @@ a {
     #secondary-nav-menu {
         position: fixed;
         margin-top: 190px;
-        margin-left: 2%;
+        margin-left: 30px;
         list-style: none;
         font-size: 205%;
     }
@@ -580,7 +587,7 @@ a {
         position: fixed;
         top: 500px;
         margin-top: 5px;
-        margin-left: 41px;
+        margin-left: 30px;
         height: auto;
         width: 250px;
         min-width: 250px;
@@ -649,7 +656,6 @@ a {
       #player-controls p:nth-child(1) {
           margin-right: 10%;
       }
-
       footer {
         position: fixed;
         background-color: transparent;
