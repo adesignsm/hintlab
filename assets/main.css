@@ -258,6 +258,7 @@ a {
         margin-left: 28px;
         list-style: none;
         font-size: 30px;
+        font-weight: lighter;
     }
 
     #product-connections-list {
