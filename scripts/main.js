@@ -232,8 +232,3 @@ $("#menu-icon").on("click", function() {
         menu_flag = 0;
     }
 });
-
-$("#alt-bag").on("click", function() {
-
-    shopping_bag();
-});

@@ -36,6 +36,7 @@ function retrieve_cart() {
 var class_toggle = 0;
 
 function shopping_bag() {
+  console.log(class_toggle);
 
   if (class_toggle == 0) {
     
