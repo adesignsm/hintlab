@@ -2,7 +2,7 @@ var scene, mouse, camera, renderer, controls;
 var model1, model2;
 var DISC;
 
-var track = new Audio("test.mp3");
+var track = new Audio("track.m3u");
 
 var viewport_mobile = window.matchMedia("(max-width: 600px)");
 var viewport_desktop = window.matchMedia("(min-width:1025px)");

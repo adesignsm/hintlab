@@ -360,7 +360,7 @@ a {
 
     #nav-menu h1 {
         position: fixed;
-        top: -2vw;
+        top: -28px;
         left: 26px;
         font-size: 60px;
         font-weight: lighter;
@@ -392,16 +392,19 @@ a {
         display: none;
     }
 
-    #secondary-nav-menu li {
-        margin-top: 4%;
-    }
-
     #secondary-nav-menu {
         position: fixed;
         margin-top: 190px;
-        margin-left: 30px;
+        margin-left: 38px;
         list-style: none;
         font-size: 30px;
+        display: block;
+    }
+
+    #secondary-nav-menu li {
+        list-style-type: none;
+        margin-left: -5%;
+        margin-top: 4%;
     }
 
     #product-connections-list {
