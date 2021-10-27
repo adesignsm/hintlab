@@ -221,8 +221,8 @@ $("#menu-icon").on("click", function() {
 
     if (menu_flag == 0) {
 
-        $("nav").stop().animate({top: "9px"}, 500);
-        $("#nav-bar").stop().animate({top: "113px"}, 500);
+        $("nav").stop().animate({top: "9px"}, 500); //nav list li
+        $("#nav-bar").stop().animate({top: "113px"}, 500); //actual bar
         $("#opacity").fadeIn(450);
         
         $('body, html').css("overflow-y", "hidden");

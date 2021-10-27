@@ -5,6 +5,8 @@ var global_cart, global_products;
 
 window.onload = function() {
 
+  var nav_list = document.getElementById("nav-list");
+
   if (viewport_desktop.matches) {
 
       //DOM stuff: NAV MENU
@@ -24,6 +26,8 @@ window.onload = function() {
       resolution_trig = 1;
   
   } else if (viewport_mobile.matches) {
+
+    nav_list.children[5].remove();
 
     resolution_trig = 0;
   }
@@ -79,8 +83,8 @@ $("#menu-icon").on("click", function() {
 
     if (menu_flag == 0) {
 
-        $("nav").stop().animate({top: "10px"}, 500);
-        $("#nav-bar").stop().animate({top: "105px"}, 500);
+        $("nav").stop().animate({top: "9px"}, 500); //nav list li
+        $("#nav-bar").stop().animate({top: "113px"}, 500); //actual bar
         $("#opacity").fadeIn(450);
         
         $('body, html').css("overflow-y", "hidden");
