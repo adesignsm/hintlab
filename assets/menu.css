@@ -2,12 +2,12 @@
 @media only screen and (max-width: 600px) {
 
     #menu-icon {
-        margin-top: -10.4%;
-        margin-left: 90%;
+        margin-top: -40px;
+        margin-left: 335px;
     }
 
     .hamburger .line{
-        width: 62%;
+        width: 25px;
         height: 2px;
         background-color: #000;
         display: block;

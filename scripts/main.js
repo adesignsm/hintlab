@@ -211,24 +211,3 @@ $(document).ready(function(){
 });
 
 //MENU animations
-
-var menu_flag = 0;
-
-$("#menu-icon").on("click", function() {
-
-    if (menu_flag == 0) {
-
-        $("nav").stop().animate({top: "0%"}, 500);
-        $("#nav-bar").stop().animate({top: "19.9%"}, 500);
-        $("#opacity").fadeIn(450);
-
-        menu_flag = 1;
-    
-    } else if (menu_flag == 1) {
-
-        $("nav").stop().animate({top: "-20%"}, 500);
-        $("#nav-bar").stop().animate({top: "0%"}, 500);
-        $("#opacity").fadeOut(450);
-        menu_flag = 0;
-    }
-});
