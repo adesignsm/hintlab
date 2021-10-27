@@ -18,7 +18,7 @@ window.onload = function() {
       nav_list.children[2].innerHTML = "SHOP";
       nav_list.children[3].innerHTML = "ABOUT";
       nav_list.children[4].innerHTML = "SEARCH";
-      nav_list.children[5].innerHTML = "SHOPPING BAG(0)";
+      nav_list.children[5].innerHTML = "SHOPPING BAG (0)";
       nav_list.children[1].remove();
 
       //add hintlab link title
@@ -28,6 +28,7 @@ window.onload = function() {
   } else if (viewport_mobile.matches) {
 
     nav_list.children[5].remove();
+    document.getElementById("img-carousel-switch").append(document.getElementById("product-img-carousel"));
 
     resolution_trig = 0;
   }
