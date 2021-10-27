@@ -8,6 +8,8 @@ var viewport_mobile = window.matchMedia("(max-width: 600px)");
 var viewport_desktop = window.matchMedia("(min-width:1025px)");
 var resolution_trig; //1 = desktop || 0 = mobile
 
+var nav_list = document.getElementById("nav-list");
+
 window.onload = function() {
 
     track.load();
@@ -24,6 +26,8 @@ window.onload = function() {
         controls.target = new THREE.Vector3(-10, -30, 0);
         controls.update();
 
+        nav_list.children[5].remove();
+
     } else if (viewport_desktop.matches) {
 
         // document.addEventListener("mousemove", onMouseMove, false);
@@ -38,7 +42,6 @@ window.onload = function() {
         controls.update();
 
         //DOM stuff: NAV MENU
-        var nav_list = document.getElementById("nav-list");
         console.log(nav_list.children);
 
         //change inner text
