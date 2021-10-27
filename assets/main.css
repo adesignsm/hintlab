@@ -34,7 +34,7 @@ a {
 @media only screen and (max-width: 600px) {
 
     body {
-        background-color: #ff0000;
+        background-color: #d8d8d8;
     }
 
     .desktop {
@@ -45,7 +45,7 @@ a {
         padding-top: 10px;
         height: auto;
         background-color: #000;
-        margin-top: -10px;
+        margin-top: -9px;
     }
 
     #nav-list h1 {
