@@ -33,6 +33,10 @@ a {
 
 @media only screen and (max-width: 600px) {
 
+    body {
+        background-color: #ff0000;
+    }
+
     .desktop {
         display: none;
     }
