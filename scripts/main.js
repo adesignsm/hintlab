@@ -221,7 +221,7 @@ $("#menu-icon").on("click", function() {
 
     if (menu_flag == 0) {
 
-        $("nav").stop().animate({top: "9.5px"}, 500);
+        $("nav").stop().animate({top: "9px"}, 500);
         $("#nav-bar").stop().animate({top: "112.5px"}, 500);
         $("#opacity").fadeIn(450);
         
