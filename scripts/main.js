@@ -27,6 +27,14 @@ window.onload = function() {
         controls.update();
 
         nav_list.children[5].remove();
+        nav_list.children[1].id = "shop-link";
+
+        document.getElementById("shop-link").onmousedown = function(e) {
+
+            window.open("./pages/products.html", "_self");
+        }
+
+        resolution_trig = 0;
 
     } else if (viewport_desktop.matches) {
 
@@ -57,6 +65,8 @@ window.onload = function() {
 
             window.open("./pages/products.html", "_self");
         }
+
+        resolution_trig = 1;
 
         //add hintlab link title
     }
@@ -260,5 +270,23 @@ $("#alt-bag").on("click", function() {
     } else if (cart_toggle == 1) {
 
         $("#cart-container").delay(200).fadeOut(400);
+
+        cart_toggle = 0;
+    }
+});
+
+$("#cart-icon").on("click", function() {
+
+    if (cart_toggle == 0) {
+
+        $("#cart-container").delay(200).fadeIn(400);
+    
+        cart_toggle = 1;
+    
+    } else if (cart_toggle == 1) {
+    
+        $("#cart-container").delay(200).fadeOut(400);
+
+        cart_toggle = 0;
     }
 });

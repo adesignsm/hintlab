@@ -1,5 +1,5 @@
-var viewport_mobile = window.matchMedia("(max-width: 600px)");
-var viewport_desktop = window.matchMedia("(min-width:1025px)");
+var viewport_mobile = window.matchMedia("(max-width: 768px)");
+var viewport_desktop = window.matchMedia("(min-width: 1040px)");
 var resolution_trig; //1 = desktop || 0 = mobile
 var global_cart, global_products;
 
@@ -31,6 +31,13 @@ window.onload = function() {
     nav_list.children[5].remove();
     document.getElementById("img-carousel-switch").append(document.getElementById("product-img-carousel"));
 
+    nav_list.children[1].id = "index-link";
+
+    document.getElementById("index-link").onmousedown = function(e) {
+
+      window.open("../index.html", "self");
+    }
+    
     resolution_trig = 0;
   }
 }
@@ -86,7 +93,7 @@ $("#menu-icon").on("click", function() {
     if (menu_flag == 0) {
 
         $("nav").stop().animate({top: "9px"}, 500); //nav list li
-        $("#nav-bar").stop().animate({top: "113px"}, 500); //actual bar
+        $("#nav-bar").stop().animate({top: "118px"}, 500); //actual bar
         $("#opacity").fadeIn(450);
         
         $('body, html').css("overflow-y", "hidden");

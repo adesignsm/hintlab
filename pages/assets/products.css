@@ -40,7 +40,7 @@ button {
 
 
 /*DESKTOP*/
-@media (min-width: 1450px) and (max-width: 2056px) {
+@media (min-width: 1040px) and (max-width: 2056px) {
 
     html {
         overflow-y: hidden;
@@ -429,7 +429,7 @@ button {
 }
 
 /*TABLET*/
-@media only screen and (min-width: 760px) and (max-width: 1450px) {
+@media only screen and (min-width: 768px) and (max-width: 1040px) {
     html {
         overflow-y: hidden;
         padding: 0;
@@ -463,13 +463,14 @@ button {
         position: fixed;
         top: -28px;
         left: 26px;
+        margin-left: -20px;
         font-size: 60px;
         font-weight: lighter;
     }
 
     #nav-list {
         margin-top: 40px;
-        margin-left: 30vw;
+        margin-left: 35vw;
     }
 
     #nav-list li {
@@ -809,10 +810,10 @@ button {
 }
 
 /*MOBILE*/
-@media only screen and (min-width: 300px) and (max-width: 760px) {
+@media only screen and (min-width: 200px) and (max-width: 768px) {
 
     #nav-list {
-        padding-top: 10px;
+        padding-top: 15px;
         height: auto;
         background-color: #000;
         margin-top: -10px;
@@ -833,21 +834,22 @@ button {
     }
 
     #nav-menu li {
-        padding-left: 2%;
+        padding-left: 10px;
         margin-top: -5px;
         list-style-type: none;
     }
 
     #nav-menu li:nth-child(1), #nav-menu li:nth-child(2), #nav-menu li:nth-child(3), #nav-menu li:nth-child(4) {
+        color: #fff;
         list-style: none;
         border-bottom: 1px solid #fff;
-        margin-bottom: 3%;
+        margin-bottom: 13px;
         font-weight: lighter;
     }
 
     nav {
         position: fixed;
-        top: -60px;
+        top: -65px;
         left: 0;
         z-index: 6;
         width: 100%;
@@ -875,6 +877,25 @@ button {
         margin-bottom: 10px;
         margin-left: 10px;
         font-weight: lighter;
+    }
+
+    #cart-icon {
+        float: right;
+        margin-right: 60px;
+        margin-top: -42.6px;
+        padding-left: 1%;
+        padding-right: 1%;
+        width: auto;
+        border: 1px solid #000;
+        border-radius: 5px;
+        font-family: 'Inconsolata', monospace;
+        font-weight: bolder;
+
+        -webkit-transition: all .4s ease;
+        -mos-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        transition: all .4s ease;
     }
 
 
@@ -1050,26 +1071,6 @@ button {
         font-family: 'Inconsolata', monospace;
         border-top: 1px solid #000;
       }
-      
-    #cart-icon {
-        float: right;
-        margin-right: 15vw;
-        margin-top: -4.6vw;
-        padding-left: 1%;
-        padding-right: 1%;
-        width: auto;
-        border: 1px solid #000;
-        border-radius: 5px;
-        font-family: 'Inconsolata', monospace;
-        font-weight: bolder;
-
-        -webkit-transition: all .4s ease;
-        -mos-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        transition: all .4s ease;
-
-    }
 
     #cart-list li {
         margin-left: -5%;
