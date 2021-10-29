@@ -4,8 +4,8 @@ var DISC;
 
 var track = new Audio("track.m3u");
 
-var viewport_mobile = window.matchMedia("(max-width: 600px)");
-var viewport_desktop = window.matchMedia("(min-width:1025px)");
+var viewport_mobile = window.matchMedia("(max-width: 768px)");
+var viewport_desktop = window.matchMedia("(min-width: 1040px)");
 var resolution_trig; //1 = desktop || 0 = mobile
 
 var nav_list = document.getElementById("nav-list");
@@ -47,10 +47,16 @@ window.onload = function() {
         //change inner text
         //remove an li element
         nav_list.children[2].innerHTML = "SHOP";
+        nav_list.children[2].id = "shop-link";
         nav_list.children[3].innerHTML = "ABOUT";
         nav_list.children[4].innerHTML = "SEARCH";
         nav_list.children[5].innerHTML = "SHOPPING BAG (0)";
         nav_list.children[1].remove();
+
+        document.getElementById("shop-link").onmousedown = function(e) {
+
+            window.open("./pages/products.html", "_self");
+        }
 
         //add hintlab link title
     }
@@ -222,7 +228,7 @@ $("#menu-icon").on("click", function() {
     if (menu_flag == 0) {
 
         $("nav").stop().animate({top: "9px"}, 500); //nav list li
-        $("#nav-bar").stop().animate({top: "113px"}, 500); //actual bar
+        $("#nav-bar").stop().animate({top: "118px"}, 500); //actual bar
         $("#opacity").fadeIn(450);
         
         $('body, html').css("overflow-y", "hidden");
@@ -238,5 +244,21 @@ $("#menu-icon").on("click", function() {
         $('body, html').css("overflow-y", "scroll");
         
         menu_flag = 0;
+    }
+});
+
+var cart_toggle = 0;
+
+$("#alt-bag").on("click", function() {
+
+    if (cart_toggle == 0) {
+
+        $("#cart-container").delay(200).fadeIn(400);
+
+        cart_toggle = 1;
+
+    } else if (cart_toggle == 1) {
+
+        $("#cart-container").delay(200).fadeOut(400);
     }
 });
