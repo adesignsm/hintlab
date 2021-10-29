@@ -37,7 +37,7 @@ window.onload = function() {
 
       window.open("../index.html", "self");
     }
-    
+
     resolution_trig = 0;
   }
 }
@@ -110,6 +110,31 @@ $("#menu-icon").on("click", function() {
         
         menu_flag = 0;
     }
+});
+
+//back to shop animation
+$("#back-to-shop").on("click", function() {
+
+  $("#products-info-container").delay(200).fadeOut(300);
+  $("#products-container").delay(400).fadeIn(200);
+  $("#secondary-nav-menu").delay(400).fadeIn(200);
+
+  //resets the image carousel for the next product to fill in
+  function removeAllchildNodes(parent) {
+
+    while (parent.firstChild) {
+
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
+  removeAllchildNodes(document.getElementById("product-img-carousel"));
+  removeAllchildNodes(document.getElementById("product-size-list"));
+
+  var default_list_child = document.createElement("option");
+  default_list_child.innerHTML = "SELECT A SIZE";
+
+  document.getElementById("product-size-list").appendChild(default_list_child);
 });
 
 $(document).ready(function(){
