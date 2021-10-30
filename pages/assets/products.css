@@ -609,6 +609,23 @@ button {
         margin-bottom: 0%;
     }
 
+    #back-to-shop {
+        position: fixed;
+        top: 10px;
+        border: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-right: 2%;
+        padding-left: 2%;
+        color: #fff;
+        background-color: #000;
+        margin-top: 100px;
+        margin-left: 26px;
+        font-size: 15px;
+        z-index: 2;
+        font-weight: lighter; 
+    }
+
     #product-img-carousel {
         margin-top: 15vw;
         margin-left: 10vw;
@@ -987,9 +1004,25 @@ button {
         height: auto;
         width: 100%;
         display: none;
-        margin-top: 17%;
+        margin-top: 30vw;
         margin-left: 5%;
         margin-bottom: 40%;
+    }
+
+    #back-to-shop {
+        position: fixed;
+        border: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-right: 2%;
+        padding-left: 2%;
+        color: #fff;
+        background-color: #000;
+        margin-top: -40px;
+        margin-left: 0px;
+        font-size: 15px;
+        z-index: 2;
+        font-weight: lighter; 
     }
 
     #products-info-container img {
