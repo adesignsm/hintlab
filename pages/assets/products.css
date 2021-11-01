@@ -1003,7 +1003,7 @@ body, html {
           height: auto;
           width: 100%;
           display: none;
-          margin-top: 20vw;
+          margin-top: 100px;
           margin-left: 5%;
           margin-bottom: 40%;
       }
@@ -1017,7 +1017,8 @@ body, html {
           padding-left: 2%;
           color: #fff;
           background-color: #000;
-          margin-top: -40px;
+          margin-top: -30px;
+          margin-bottom: 20px;
           margin-left: 0px;
           font-size: 15px;
           z-index: 2;

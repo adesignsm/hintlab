@@ -1,6 +1,7 @@
 var viewport_mobile = window.matchMedia("(max-width: 768px)");
 var viewport_desktop = window.matchMedia("(min-width: 1040px)");
-var resolution_trig; //1 = desktop || 0 = mobile
+var viewport_tablet = window.matchMedia("(min-width: 768px)");
+var resolution_trig; //1 = desktop || 0 = mobile || 2 = tablet
 var global_cart, global_products, cart_switch;
 
 window.onload = function() {
@@ -43,6 +44,17 @@ window.onload = function() {
     resolution_trig = 0;
 
     cart_switch = "cart-icon";
+  
+  } else if (viewport_tablet.matches) {
+
+    resolution_trig = 2;
+    
+    nav_list.children[2].innerHTML = "SHOP";
+    nav_list.children[2].href = "products.html";
+    nav_list.children[3].innerHTML = "ABOUT";
+    nav_list.children[4].innerHTML = "SEARCH";
+    nav_list.children[5].innerHTML = "SHOPPING BAG (0)";
+    nav_list.children[1].remove();
   }
 }
 
