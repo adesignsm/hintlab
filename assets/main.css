@@ -362,7 +362,6 @@ a {
         position: fixed;
         top: -28px;
         left: 26px;
-        margin-left: -20px;
         font-size: 60px;
         font-weight: lighter;
     }
@@ -465,6 +464,10 @@ a {
         float: right;
         margin-top: 10vw;
         margin-right: 10vw;
+    }
+
+    #cart-icon {
+        display: none;
     }
 
     #checkout-button {
