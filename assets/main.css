@@ -664,7 +664,7 @@ a {
 
     nav {
         position: fixed;
-        top: -65px;
+        top: -100px;
         left: 0;
         z-index: 6;
         width: 100%;
