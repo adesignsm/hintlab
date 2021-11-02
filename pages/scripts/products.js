@@ -1,6 +1,6 @@
-var viewport_mobile = window.matchMedia("(max-width: 768px)");
-var viewport_desktop = window.matchMedia("(min-width: 1040px)");
-var viewport_tablet = window.matchMedia("(min-width: 768px)");
+var viewport_mobile = window.matchMedia("(min-width: 200px) and (max-width: 768px)");
+var viewport_desktop = window.matchMedia("(min-width: 1040px) and (max-width: 2056px)");
+var viewport_tablet = window.matchMedia("(min-width: 768px) and (max-width: 1040px)");
 var resolution_trig; //1 = desktop || 0 = mobile || 2 = tablet
 var global_cart, global_products, cart_switch;
 
@@ -36,11 +36,6 @@ window.onload = function() {
 
     nav_list.children[1].id = "index-link";
 
-    document.getElementById("index-link").onmousedown = function(e) {
-
-      window.open("../index.html", "self");
-    }
-
     resolution_trig = 0;
 
     cart_switch = "cart-icon";
@@ -57,11 +52,6 @@ window.onload = function() {
     nav_list.children[1].remove();
 
     cart_switch = "alt-bag";
-
-    document.getElementById("index-link").onmousedown = function(e) {
-
-      window.open("../index.html", "self");
-    }
   }
 }
 
