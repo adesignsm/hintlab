@@ -55,6 +55,13 @@ window.onload = function() {
     nav_list.children[4].innerHTML = "SEARCH";
     nav_list.children[5].innerHTML = "SHOPPING BAG (0)";
     nav_list.children[1].remove();
+
+    cart_switch = "alt-bag";
+
+    document.getElementById("index-link").onmousedown = function(e) {
+
+      window.open("../index.html", "self");
+    }
   }
 }
 
@@ -348,16 +355,11 @@ shop_client.createCart().then((cart) => {
 
             console.log(cart);
 
-            if (cart.lineItems.length <= 0 || cart.lineItems[0].variant_id !== item.variant_id) {
-    
-              var cart_toggle = 1;
-            }
-
             if (resolution_trig == 0) {
 
               document.getElementById("cart-icon").innerHTML = cart.subtotal;
             
-            } else if (resolution_trig == 1) {
+            } else if (resolution_trig == 1 || resolution_trig == 2) {
 
               document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.lineItemCount + ")";
             }
@@ -410,7 +412,7 @@ shop_client.createCart().then((cart) => {
                   
                   if (resolution_trig == 0) {
                     document.getElementById("cart-icon").innerHTML = cart.subtotal;
-                  } else if (resolution_trig == 1) {
+                  } else if (resolution_trig == 1 || resolution_trig == 2) {
                     document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.lineItemCount + ")";
                   }
                 }
@@ -428,7 +430,7 @@ shop_client.createCart().then((cart) => {
                   
                     if (resolution_trig == 0) {
                       document.getElementById("cart-icon").innerHTML = cart.subtotal;
-                    } else if (resolution_trig == 1) {
+                    } else if (resolution_trig == 1 || resolution_trig == 2) {
                       document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.lineItemCount + ")";
                     }
                   
@@ -438,7 +440,7 @@ shop_client.createCart().then((cart) => {
                   
                     if (resolution_trig == 0) {
                       document.getElementById("cart-icon").innerHTML = cart.subtotal;
-                    } else if (resolution_trig == 1) {
+                    } else if (resolution_trig == 1 || resolution_trig == 2) {
                       document.getElementById("alt-bag").innerHTML = "SHOPPING BAG(" + cart.lineItemCount + ")";
                     }
                   }
@@ -454,4 +456,5 @@ shop_client.createCart().then((cart) => {
     console.error("request failed");
   });
 });
+
 

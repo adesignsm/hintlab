@@ -1,9 +1,9 @@
 /*MOBILE*/
-@media only screen and (min-width: 300px) and (max-width: 768px) {
+@media only screen and (min-width: 200px) and (max-width: 768px) {
 
     #menu-icon {
         float: right;
-        margin-top: -40px;
+        margin-top: -34px;
         margin-right: 10px;
     }
 

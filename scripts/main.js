@@ -4,8 +4,9 @@ var DISC;
 
 var track = new Audio("track.mp3");
 
-var viewport_mobile = window.matchMedia("(max-width: 768px)");
-var viewport_desktop = window.matchMedia("(min-width: 1040px)");
+var viewport_mobile = window.matchMedia("(min-width: 200px) and (max-width: 768px)");
+var viewport_desktop = window.matchMedia("(min-width: 1040px) and (max-width: 2056px)");
+var viewport_tablet = window.matchMedia("(min-width: 768px) and (max-width: 1040px)");
 var resolution_trig; //1 = desktop || 0 = mobile
 
 var nav_list = document.getElementById("nav-list");
@@ -69,6 +70,29 @@ window.onload = function() {
         resolution_trig = 1;
 
         //add hintlab link title
+    
+    } else if (viewport_tablet.matches) {
+
+        camera.position.x = 45;
+        camera.position.y = -30;
+        camera.position.z = 80; //brings closer to camera
+
+        controls.target = new THREE.Vector3(-10, -30, 0); //x y z
+        controls.update();
+
+        nav_list.children[2].innerHTML = "SHOP";
+        nav_list.children[2].id = "shop-link";
+        nav_list.children[3].innerHTML = "ABOUT";
+        nav_list.children[4].innerHTML = "SEARCH";
+        nav_list.children[5].innerHTML = "SHOPPING BAG (0)";
+        nav_list.children[1].remove();
+
+        document.getElementById("shop-link").onmousedown = function(e) {
+
+            window.open("./pages/products.html", "_self");
+        }
+
+        resolution_trig = 2;
     }
 }
 

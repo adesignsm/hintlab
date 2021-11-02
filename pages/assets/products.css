@@ -285,7 +285,6 @@ body, html {
   
       #cart-container {
           position: fixed;
-          margin-top: 0%;
           height: 100%;
           width: 100%;
           background-color: #fff;
@@ -293,7 +292,6 @@ body, html {
           font-size: 80%;
           z-index: 4;
           font-family: 'Inconsolata', monospace;
-          border-top: 1px solid #000;
         }
   
         #back-to-shop {
@@ -316,7 +314,7 @@ body, html {
       #cart-list {
           position: absolute;
           height: 40vw;
-          margin-top: 10vw;
+          margin-top: 2vw;
           margin-left: 200px;
           overflow-y: scroll;
       }
@@ -352,8 +350,9 @@ body, html {
   
       #cart-checkout-container {
           float: right;
-          margin-top: 10vw;
+          margin-top: 5vw;
           margin-right: 10vw;
+          zoom: 1.5;
       }
   
       #checkout-button {
@@ -626,8 +625,8 @@ body, html {
       }
   
       #product-img-carousel {
-          margin-top: 15vw;
-          margin-left: 10vw;
+          margin-top: 20vw;
+          margin-left: 5vw;
           height: auto;
           width: 40%;
           display: block;
@@ -640,7 +639,7 @@ body, html {
       #product-img-carousel img {
           scroll-snap-align: center;
           margin-bottom: 25vw;
-          width: 30px;
+          width: 400px;
           min-width: 30vw;
       }
   
@@ -650,7 +649,7 @@ body, html {
   
       #product-info-box {
           position: fixed;
-          top: 240px;
+          top: 200px;
           left: 51%;
       }
   
@@ -709,7 +708,7 @@ body, html {
   
       #cart-container {
           position: fixed;
-          margin-top: 0%;
+          margin-top: -100px;
           height: 100%;
           width: 100%;
           background-color: #fff;
@@ -717,13 +716,13 @@ body, html {
           font-size: 80%;
           z-index: 4;
           font-family: 'Inconsolata', monospace;
-          border-top: 1px solid #000;
         }
   
       #cart-list {
           position: absolute;
           height: 100%;
-          margin-top: 10vw;
+          margin-top: 5vw;
+          margin-left: 10vw;
           overflow-y: scroll;
       }
   
@@ -894,18 +893,15 @@ body, html {
       #nav-bar {
           position: fixed;
           width: 100%;
-          height: 30px;
           top: 0;
           left: 0;
           z-index: 6;
-          padding-bottom: 3.5%;
           border-bottom: 1.5px solid #000;
           background-color: #fff;
       }
   
       #nav-bar h1 {
-          font-size: 150%;
-          padding-bottom: 2%;
+          font-size: 25px;
           margin: 1%;
           margin-top: 10px;
           margin-bottom: 10px;
@@ -916,7 +912,7 @@ body, html {
       #cart-icon {
           float: right;
           margin-right: 60px;
-          margin-top: -42.6px;
+          margin-top: -35.6px;
           padding-left: 1%;
           padding-right: 1%;
           width: auto;
@@ -1112,7 +1108,7 @@ body, html {
   
       #cart-container {
           position: fixed;
-          margin-top: -3vw;
+          margin-top: 5px;
           height: 100%;
           width: 100%;
           background-color: #fff;
@@ -1120,11 +1116,12 @@ body, html {
           font-size: 80%;
           z-index: 4;
           font-family: 'Inconsolata', monospace;
-          border-top: 1px solid #000;
+
         }
 
         #cart-list {
             height: 200px;
+            margin-top: 50px;
         }
   
       #cart-list li {
