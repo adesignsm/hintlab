@@ -940,7 +940,7 @@ body, html {
           height: 100%;
           width: 115vw;
           float: right;
-          margin-top: 45px;
+          margin-top: 50px;
           margin-right: 0vw;
           margin-left: 0vw;
           padding-bottom: 100px;
@@ -1005,20 +1005,18 @@ body, html {
       }
   
       #back-to-shop {
-          position: fixed;
+          position: absolute;
           border: none;
-          padding-top: 1%;
-          padding-bottom: 1%;
-          padding-right: 2%;
-          padding-left: 2%;
-          color: #fff;
-          background-color: #000;
-          margin-top: -30px;
+          color: #000;
+          margin-top: -25px;
           margin-bottom: 20px;
-          margin-left: 0px;
-          font-size: 15px;
+          margin-left: -5px;
+          font-size: 10px;
           z-index: 2;
+          background-color: transparent;
+          font-family: Helvetica, sans-serif;
           font-weight: lighter; 
+          text-decoration: underline;
       }
   
       #products-info-container img {

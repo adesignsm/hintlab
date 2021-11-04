@@ -125,6 +125,7 @@ function init() {
     renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
+
     document.getElementById("hero-canvas-container").appendChild(renderer.domElement);
 
     window.addEventListener("resize", function() {
@@ -141,6 +142,11 @@ function init() {
     const light = new THREE.PointLight(0xffffff, 0.5, 100);
     light.position.set(-15, 15, 50);
     scene.add( light );
+
+    // var logo_geo = new THREE.PlaneGeometry(6, 7);
+    // var logo_material = new THREE.MeshBasicMaterial({map: new THREE.TextureLoader().load("media/logo.png"), side: THREE.DoubleSide});
+    // var logo = new THREE.Mesh(logo_geo, logo_material);
+    // scene.add(logo);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
 
@@ -160,6 +166,7 @@ function init() {
         model1.position.x = -10;
 
         scene.add(model1);
+        
 
         model1.applyMatrix(new THREE.Matrix4().makeScale(1, -1, 1));
 
@@ -313,4 +320,23 @@ $("#cart-icon").on("click", function() {
 
         cart_toggle = 0;
     }
+});
+
+function onReady(callback) {
+
+    var intervalId = window.setInterval(function() {
+
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+
+        window.clearInterval(intervalId);
+        callback.call(this);
+
+      }
+    }, 1000);
+}
+  
+onReady(function() {
+
+    
+
 });
