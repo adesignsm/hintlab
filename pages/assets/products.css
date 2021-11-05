@@ -102,7 +102,8 @@ body, html {
       }
   
       #nav-list li:last-child {
-          margin-right: 0vw;
+          position: fixed;
+          right: 30px;
           float: right;
       }
   
@@ -925,9 +926,11 @@ body, html {
       #nav-bar {
           position: fixed;
           width: 100%;
+          height: 30px;
           top: 0;
           left: 0;
           z-index: 6;
+          padding-bottom: 15px;
           border-bottom: 1.5px solid #000;
           background-color: #fff;
       }
