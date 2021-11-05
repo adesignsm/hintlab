@@ -12,6 +12,9 @@ var nav_list = document.getElementById("nav-list");
 
 window.onload = function() {
 
+    alert(window.innerWidth);
+    alert(window.innerHeight);
+
     track.load();
 
     if (viewport_mobile.matches) {
