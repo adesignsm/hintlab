@@ -710,7 +710,7 @@ a {
         left: 0%;
     }
 
-    #music-player {
+    /* #music-player {
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -724,7 +724,7 @@ a {
         padding-top: 10px;
         background-color: #fff;
         z-index: 5;
-    }
+    } */
 
     #player-inner {
         display: inline-block;
