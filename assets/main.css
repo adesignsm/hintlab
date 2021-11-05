@@ -834,6 +834,7 @@ a {
         box-shadow: 0 0 10px 0 gray;
         padding-left: 15px;
         margin-top: 100%;
+        background-color: #fff;
         z-index: 7;
     }
 
