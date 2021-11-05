@@ -1073,7 +1073,7 @@ body, html {
           margin-top: -250px;
           margin-bottom: 50px;
           text-align: right;
-          margin-right: 100px;
+          margin-right: 50px;
         }
   
       #product-img-carousel img {
@@ -1162,7 +1162,7 @@ body, html {
             margin-top: 20px;
             width: 100vw;
             display: flex;
-            overflow-y: scroll;
+            overflow-y: hidden;
             scroll-snap-type: x proximity;
             scroll-snap-stop: always;
         }
