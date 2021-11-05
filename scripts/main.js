@@ -5,7 +5,7 @@ var DISC;
 var track = new Audio("track.mp3");
 
 var viewport_mobile = window.matchMedia("(min-width: 200px) and (max-width: 1160px)");
-var viewport_desktop = window.matchMedia("(min-width: 1040px) and (max-width: 2056px)");
+var viewport_desktop = window.matchMedia("(min-width: 1160px) and (max-width: 2056px)");
 var resolution_trig; //1 = desktop || 0 = mobile
 
 var nav_list = document.getElementById("nav-list");

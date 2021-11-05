@@ -1,5 +1,5 @@
 var viewport_mobile = window.matchMedia("(min-width: 200px) and (max-width: 1160px)");
-var viewport_desktop = window.matchMedia("(min-width: 1040px) and (max-width: 2056px)");
+var viewport_desktop = window.matchMedia("(min-width: 1160px) and (max-width: 2056px)");
 
 var resolution_trig; //1 = desktop || 0 = mobile || 2 = tablet
 var global_cart, global_products, cart_switch;
@@ -382,7 +382,7 @@ shop_client.createCart().then((cart) => {
 
                 line_details_container.append(line_title, line_dollar, line_size, line_qty, inc_line_item, dec_line_item);
                 line_details_container.id = "line-details-container";
-                
+
                 line_item.append(line_img, line_details_container);
                 document.getElementById("cart-list").appendChild(line_item);
 

@@ -713,6 +713,7 @@ a {
     #music-player {
       position: fixed;
         top: 57%;
+        margin-left: 35vw;
         height: 120px;
         width: 280px;
         border: 1px solid #000;
