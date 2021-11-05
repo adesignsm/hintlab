@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     font-family: Helvetica, sans-serif;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     
     -webkit-text-size-adjust: none;
