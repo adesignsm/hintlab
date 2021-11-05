@@ -313,7 +313,7 @@ body, html {
       #cart-list {
           position: absolute;
           height: 40vw;
-          margin-top: 100px;
+          margin-top: 50px;
           margin-left: 200px;
           overflow-y: scroll;
       }
@@ -323,13 +323,13 @@ body, html {
       }
   
       #cart-list li {
-          margin-left: 5vw;
-          margin-bottom: 1vw;
           list-style-type: none;
       }
   
       #cart-list img {
-          margin-top: -3%;
+        margin-left: 5vw;
+          margin-top: -10px;
+          margin-bottom: 100px;
           float: left;
           width: 300px;
       }
@@ -346,7 +346,6 @@ body, html {
 
       #line-qty-container {
           text-align: right;
-          position: absolute;
           margin-top: 330px;
           margin-left: 200px;
           width: 200px;
@@ -356,7 +355,8 @@ body, html {
           border: none;
           color: #000;
           background-color: transparent;
-          margin-top: -15px;
+          margin-top: 15px;
+          margin-left: 5px;
           font-size: 20px;
           padding-right: 20px;
       }
@@ -668,21 +668,19 @@ body, html {
       }
   
       #back-to-shop {
-          position: fixed;
-          top: 10px;
-          border: none;
-          padding-top: 1%;
-          padding-bottom: 1%;
-          padding-right: 2%;
-          padding-left: 2%;
-          color: #fff;
-          background-color: #000;
-          margin-top: 100px;
-          margin-left: 26px;
-          font-size: 15px;
-          z-index: 2;
-          font-weight: lighter;
-      }
+        position: absolute;
+        border: none;
+        color: #000;
+        margin-top: -25px;
+        margin-bottom: 25px;
+        margin-left: -5px;
+        font-size: 15px;
+        z-index: 2;
+        background-color: transparent;
+        font-family: Helvetica, sans-serif;
+        font-weight: lighter; 
+        text-decoration: underline;
+    }
   
       #product-img-carousel {
           margin-top: 20vw;
@@ -1152,7 +1150,7 @@ body, html {
   
       #cart-container {
           position: fixed;
-          margin-top: 5px;
+          margin-top: -2px;
           height: 100%;
           width: 100%;
           background-color: #fff;

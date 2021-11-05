@@ -379,15 +379,11 @@ shop_client.createCart().then((cart) => {
                 }
 
                 var line_details_container = document.createElement("div");
-                var line_qty_container = document.createElement("div");
 
-                line_details_container.append(line_title, line_dollar, line_size);
+                line_details_container.append(line_title, line_dollar, line_size, line_qty, inc_line_item, dec_line_item);
                 line_details_container.id = "line-details-container";
-
-                line_qty_container.append(line_qty, inc_line_item, dec_line_item);
-                line_qty_container.id = "line-qty-container";
                 
-                line_item.append(line_img, line_details_container, line_qty_container);
+                line_item.append(line_img, line_details_container);
                 document.getElementById("cart-list").appendChild(line_item);
 
                 //increase and decrease quantity
