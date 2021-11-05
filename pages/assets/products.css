@@ -1070,7 +1070,7 @@ body, html {
 
       #line-details-container {    
           float: right;
-          margin-top: -250px;
+          margin-top: -230px;
           margin-bottom: 50px;
           text-align: right;
           margin-right: 50px;
@@ -1152,7 +1152,7 @@ body, html {
           width: 100%;
           background-color: #fff;
           display: none;
-          font-size: 80%;
+          font-size: 60%;
           z-index: 4;
           font-family: 'Inconsolata', monospace;
         }
